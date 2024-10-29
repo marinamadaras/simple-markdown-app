@@ -65,6 +65,10 @@ class MainPanel: JPanel() {
         uploadButton.addActionListener(FileUploadListener(::onFileSelected, ::showErrorLabel))
     }
 
+    /**
+     * Callback function for when a file is selected,
+     * it shows the contents of the file and hides the error label.
+     */
     fun onFileSelected(content: List<String>) {
         fileContentPane.updateText(content)
         errorLabel.hideError()
@@ -72,6 +76,10 @@ class MainPanel: JPanel() {
         repaint()
     }
 
+    /**
+     * Callback function for when an error occurs,
+     * it hides the file contents and shows the error label.
+     */
     fun showErrorLabel(errorMessage: String) {
         fileContentPane.updateText(null)
         errorLabel.showError(errorMessage)
