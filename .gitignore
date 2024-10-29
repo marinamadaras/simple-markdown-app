@@ -1,0 +1,11 @@
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+gradle/
+.idea
+.kotlin
+gradlew
+gradlew.bat
+.DS_Store
+build/
+.gradle
